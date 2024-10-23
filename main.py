@@ -1,3 +1,4 @@
+# Sian Jose
 def encode(password):
     password1 = ''
     for i in password:
