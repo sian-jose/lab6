@@ -9,7 +9,14 @@ def encode(password):
 def decode(decode_pass):
     decoded = ""
     for i in decode_pass:
-        decoded += str(int(i) -3)
+        if i == "0":
+            decoded += "7"
+        elif i =="1":
+            decoded += "8"
+        elif i == "2":
+            decoded += "9"
+        else:
+            decoded += str(int(i) -3)
     return decoded
 
 if __name__ == '__main__':
@@ -22,6 +29,7 @@ if __name__ == '__main__':
             password = input("Please enter your password to encode: ")
             encoded = encode(password)
         elif option == 2:
-            decode(encoded)
+            decoded = decode(encoded)
+            print(f"The encoded password is {encoded}, and the original password is {decoded}")
         elif option == 3:
             continue
