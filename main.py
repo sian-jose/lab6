@@ -15,17 +15,17 @@ def encode(password):
     return password1
 
 def decode(decode_pass):
-    decoded = ""
+    password = ""
     for i in decode_pass:
         if i == "0":
-            decoded += "7"
+            password += "7"
         elif i =="1":
-            decoded += "8"
+            password += "8"
         elif i == "2":
-            decoded += "9"
+            password += "9"
         else:
-            decoded += str(int(i) -3)
-    return decoded
+            password += str(int(i) -3)
+    return password
 
 if __name__ == '__main__':
     option = 0
