@@ -6,8 +6,11 @@ def encode(password):
     print("Your password has been encoded and stored!")
     return password1
 
-def decode():
-    pass
+def decode(decode_pass):
+    decoded = ""
+    for i in decode_pass:
+        decoded += str(int(i) -3)
+    return decoded
 
 if __name__ == '__main__':
     option = 0
@@ -19,6 +22,6 @@ if __name__ == '__main__':
             password = input("Please enter your password to encode: ")
             encoded = encode(password)
         elif option == 2:
-            decode()
+            decode(encoded)
         elif option == 3:
             continue
